@@ -1,0 +1,42 @@
+Create Social Media Backend Server based on the following guidelines.
+1-Create user model and crud operation
+***********Note: implement Role based authentication where there are [admin, user]	
+2-Create Post Model and crud operation
+3-Create Comments Model and crud operation
+4-Create Review System where users* can create reviews for posts created by creators* (Review Model and crud operation)
+5-Each user can have profile pictures 
+*********Hint: you can use multer package to upload images
+*********Hint: you can upload images to cloudinary free hosting service for images ;)
+##Notes:
+1-Protect the apis so that only allowed Roles can use certain apis 
+Example: only admin role can delete creators,users,posts…
+2-When getting each post retrieve all its comments and reviews with it.
+3-When getting user retrieve its posts with it
+4-Protect sensitive information such as passwords form returning
+5-Implement request validation using Joi or similar packages
+6-Implement error handling strategy
+7-Structure the project
+
+
+Bonus:
+Create Top 5 rated Posts(posts that have highest average reviews)
+Hint: use mongodb aggregation pipelines
+///////////////////////////////////
+
+
+1-create server  data > db.js  👍✔
+2- connect db  👍✔
+3- create models  👍✔
+4- create routes   👍✔
+5- create controller 👍✔
+6- add express-async-errors package to (try catch) => npm i express-async-errors =>  require('express-async-errors')  before  
+importing routes in index.js 👍✔
+6- create utils => global error handeler 👍✔
+7- create custom error 👍✔
+8- AppError => return next (new AppError ('message',status))  👍✔
+9-create CRUD operation 👍✔
+10-registration  => to hash the password use  npm i bcryptjs 👍✔
+11-login 👍✔ authentication
+12-validation 👍✔
+13-token authorization => npm i jsonwebtoken
+14-populate
